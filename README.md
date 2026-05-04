@@ -4,13 +4,13 @@
 This module focuses on the **video-based gesture analysis pipeline** used for evaluating articulation patterns in pronunciation learning. It processes input videos, extracts skeletal keypoints, and performs gesture similarity analysis to assess correctness.
 
 The design prioritizes:
-- ⚡ Low latency (real-time usability)
-- 🔒 Privacy (no raw video storage)
-- 📉 Efficiency (small dataset compatibility)
+- Low latency (real-time usability)
+- Privacy (no raw video storage)
+- Efficiency (small dataset compatibility)
 
 ---
 
-## 🧠 Problem Statement
+## Problem Statement
 Traditional pronunciation systems rely heavily on audio, ignoring **visual articulation cues** such as lip and hand movements.
 
 This pipeline addresses:
@@ -21,7 +21,7 @@ This pipeline addresses:
 
 ---
 
-## 🏗️ Pipeline Architecture
+## Pipeline Architecture
 
 ```
 Input Video
@@ -43,7 +43,7 @@ Top-K Gesture Predictions
 
 ---
 
-## 📦 Data Processing
+## Data Processing
 
 ### Keypoint Extraction
 We use **MediaPipe Holistic** to extract:
@@ -66,7 +66,7 @@ This ensures stable input across varying video conditions.
 
 ---
 
-## ⚙️ Model Architecture
+## Model Architecture
 
 ### Temporal Convolutional Network (TCN)
 
@@ -84,7 +84,7 @@ Instead of LSTMs or Transformers, we use **TCN**:
 
 ---
 
-## 🔍 Gesture Matching
+## Gesture Matching
 
 Instead of pure classification, the system uses:
 
@@ -100,7 +100,7 @@ This makes results:
 
 ---
 
-## 📊 Training Details
+## Training Details
 
 - Dataset size: ~350 videos
 - Classes: 7 gestures
@@ -111,7 +111,7 @@ This makes results:
 
 ---
 
-## 📈 Results
+## Results
 
 | Model              | Test Accuracy |
 |-------------------|--------------|
@@ -128,7 +128,7 @@ This makes results:
 
 ---
 
-## ⚡ Optimization for Real-Time Use
+## Optimization for Real-Time Use
 
 - Cached keypoints (.npy) to avoid recomputation
 - Frame downscaling → ~30% speed boost
@@ -136,7 +136,7 @@ This makes results:
 
 ---
 
-## 🔒 Privacy Considerations
+## Privacy Considerations
 
 - No raw video storage
 - Only skeletal keypoints retained
@@ -144,7 +144,7 @@ This makes results:
 
 ---
 
-## 🚀 Future Improvements
+## Future Improvements
 
 - Larger dataset for better generalization
 - Improved handling of similar gestures
@@ -153,7 +153,7 @@ This makes results:
 
 ---
 
-## 🧩 Integration
+## Integration
 
 ```
 Video Input → Video Pipeline → Gesture Score
@@ -163,7 +163,7 @@ Video Input → Video Pipeline → Gesture Score
 
 ---
 
-## ⚠️ Note
+## Note
 
 This repository contains a **high-level implementation overview only**.  
 Detailed model configurations, dataset specifics, and proprietary components are intentionally omitted.
