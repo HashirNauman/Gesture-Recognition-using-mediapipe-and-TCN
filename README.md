@@ -1,4 +1,4 @@
-# 🎥 Video Pipeline for Gesture-Based Pronunciation Assessment
+# Video Pipeline for Gesture-Based Pronunciation Assessment
 
 ## Overview
 This module focuses on the **video-based gesture analysis pipeline** used for evaluating articulation patterns in pronunciation learning. It processes input videos, extracts skeletal keypoints, and performs gesture similarity analysis to assess correctness.
